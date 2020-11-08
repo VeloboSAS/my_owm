@@ -6,13 +6,12 @@ from pyowm.utils.config import get_default_config
 config_dict = get_default_config()
 #config_dict = config.get_default_config_for_subscription_type('professional')
 config_dict['language'] = 'ru'  # your language here, eg. Russian
-owm = OWM('6d00d1d4e704068d70191bad2673e0cc', config_dict)
+owm = OWM('api_key', config_dict)
 
 
 city = input('Введите название города:')
 
 mgr = owm.weather_manager()
-
 
 # Search for current weather in 'city' and get details
 observation = mgr.weather_at_place(city)
@@ -30,17 +29,8 @@ w.clouds                  # 75
 
 
 print('В городе ' + city + ' температура сейчас: '+ str(temperature) + ' по цельсию')
-#print(w.rain)
 print('Также в городе: ' + w.detailed_status)
 print('Скорость ветра: ' + str(wind) + ' м/с')
 print('Относительная влажность: ' + str(w.humidity) + ' %')
-
-
-
-#Weather forecasts
-
-
-
-
 
 
