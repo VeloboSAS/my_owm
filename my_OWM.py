@@ -1,5 +1,5 @@
 from pyowm import OWM
-from pyowm.utils import timestamps
+#from pyowm.utils import timestamps
 from pyowm.utils.config import get_default_config
 
 
@@ -34,18 +34,11 @@ print('В городе ' + city + ' температура сейчас: '+ str(
 print('Также в городе: ' + w.detailed_status)
 print('Скорость ветра: ' + str(wind) + ' м/с')
 print('Относительная влажность: ' + str(w.humidity) + ' %')
-print('Скорость ветра: ' + str(w.clouds ) + ' м/с')
+
 
 
 #Weather forecasts
 
-daily_forecaster = mgr.forecast_at_place(city, 'daily')
-tomorrow = timestamps.tomorrow()                                   # datetime object for tomorrow
-weather_daily = daily_forecaster.get_weather_at(tomorrow)
-
-
-print(weather_daily)
-#print(three_h_forecast)
 
 
 
