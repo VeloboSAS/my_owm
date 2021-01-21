@@ -26,7 +26,7 @@ try:
     print('Также в городе: ' + status)
     print('Скорость ветра: ' + str(wind) + ' м/с')
     print('Относительная влажность: ' + str(hum) + ' %')
-    print('Скорость ветра: ' + str(cloud) + ' м/с')
+    print('Облачность: ' + str(cloud) + ' %')
 
 except (pyowm.commons.exceptions.NotFoundError):
     print('Ошибка! Город не найден.')
